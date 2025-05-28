@@ -1359,21 +1359,18 @@ section,
 # More Features Section
 --------------------------------------------------------------*/
 .more-features .features-image {
-  position: relative;
-  min-height: 400px;
+  height: auto; /* Remove fixed height */
+  min-height: 400px; /* Or whatever height shows the full image */
+  overflow: visible; /* Allow full image to show */
+  border-radius: 24px;
 }
 
 .more-features .features-image img {
-  position: absolute;
-  inset: 0;
-  display: block;
+  position: relative; /* Instead of absolute */
   width: 100%;
-  height: 100%;
-  object-fit: fill;
-  height: 120%;
-  width: 100%;
-  z-index: 1;
-  border-radius:24px 24px;
+  height: auto; /* Maintain natural proportions */
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 24px;
 }
 
 .more-features h3 {
